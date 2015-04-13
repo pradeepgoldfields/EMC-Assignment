@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.vagrant.VagrantUpCommand plugin="vagrant@1.0.1">
+      <destroyOnError>false</destroyOnError>
+      <provider></provider>
+      <wrapper>
+        <vagrantFile>C:\Users\P\EMC\puppet-sandbox-master\Vagrantfile</vagrantFile>
+        <vagrantVm></vagrantVm>
+        <validated>false</validated>
+      </wrapper>
+      <dontKillMe>true</dontKillMe>
+    </org.jenkinsci.plugins.vagrant.VagrantUpCommand>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

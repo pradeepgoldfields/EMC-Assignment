@@ -1,0 +1,9 @@
+{
+  "tests\\init.pp": "6b34827ac4731829c8a117f0b3fb8167",
+  "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+  "README.markdown": "0a51eb65ab35e608192bec2003495426",
+  "metadata.json": "330ec55686466539d6aeffa8f8adb79a",
+  "spec\\spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+  "manifests\\init.pp": "d7b7b85177a87ecea4a6786aead38496",
+  "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1"
+}

@@ -1,0 +1,179 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\run vagrant up
+[run vagrant up] $ vagrant -v
+Vagrant 1.7.2
+[ vagrant ]: Executing command :[vagrant, up] in folder C:\Users\P\EMC\puppet-sandbox-master
+[puppet-sandbox-master] $ vagrant up
+Bringing machine 'puppet' up with 'virtualbox' provider...
+Bringing machine 'client1' up with 'virtualbox' provider...
+Bringing machine 'client2' up with 'virtualbox' provider...
+==> puppet: Importing base box 'centos6'...
+[KProgress: 10%[KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 50%[KProgress: 70%[KProgress: 90%[K==> puppet: Matching MAC address for NAT networking...
+==> puppet: Setting the name of the VM: puppet-sandbox-master_puppet_1428834128258_64104
+==> puppet: Clearing any previously set network interfaces...
+==> puppet: Preparing network interfaces based on configuration...
+    puppet: Adapter 1: nat
+    puppet: Adapter 2: hostonly
+==> puppet: Forwarding ports...
+    puppet: 8140 => 8140 (adapter 1)
+    puppet: 22 => 2222 (adapter 1)
+==> puppet: Running 'pre-boot' VM customizations...
+==> puppet: Booting VM...
+==> puppet: Waiting for machine to boot. This may take a few minutes...
+    puppet: SSH address: 127.0.0.1:2222
+    puppet: SSH username: vagrant
+    puppet: SSH auth method: private key
+    puppet: Warning: Connection timeout. Retrying...
+    puppet: Warning: Connection timeout. Retrying...
+    puppet: Warning: Remote connection disconnect. Retrying...
+    puppet: 
+    puppet: Vagrant insecure key detected. Vagrant will automatically replace
+    puppet: this with a newly generated keypair for better security.
+    puppet: 
+    puppet: Inserting generated public key within guest...
+==> puppet: Machine booted and ready!
+==> puppet: Checking for guest additions in VM...
+==> puppet: Setting hostname...
+==> puppet: Configuring and enabling network interfaces...
+==> puppet: Mounting shared folders...
+    puppet: /vagrant => C:/Users/P/EMC/puppet-sandbox-master
+    puppet: /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1 => C:/Users/P/EMC/puppet-sandbox-master/provision/modules
+    puppet: /tmp/vagrant-puppet/manifests-2c1be6756611028b6f44aed39d040449 => C:/Users/P/EMC/puppet-sandbox-master/provision/manifests
+==> puppet: Running provisioner: puppet...
+==> puppet: Running Puppet with default.pp...
+==> puppet: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:2
+==> puppet:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:2:in `result')
+==> puppet: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:3
+==> puppet:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:3:in `result')
+==> puppet: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:9
+==> puppet:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:9:in `result')
+==> puppet: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:10
+==> puppet:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:10:in `result')
+==> puppet: Warning: Config file /etc/puppet/hiera.yaml not found, using Hiera defaults
+==> puppet: Notice: Compiled catalog for puppet.example.com in environment production in 7.24 seconds
+==> puppet: Notice: /Stage[pre]/Repos::Yum/File[puppetlabs.repo]/content: content changed '{md5}9eca43fb2e9feef4af7be3dcaffba1b9' to '{md5}411280de3bdc15fbc8fe2cd0f8fd01d3'
+==> puppet: Notice: /File[puppetlabs.repo]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> puppet: Notice: /Stage[pre]/Repos::Yum/Exec[yum_makecache]: Triggered 'refresh' from 2 events
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[/vagrant/nodes.pp]/owner: owner changed 'vagrant' to 'root'
+==> puppet: Notice: /Stage[main]/Puppet::Server/Package[puppet-lint]/ensure: created
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[/etc/puppet/files]/ensure: created
+==> puppet: Notice: /Stage[main]/Puppet::Server/Package[puppetmaster]/ensure: created
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[site.pp]/ensure: defined content as '{md5}b01a7a6f5c131cb6a45f1f675c59e531'
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[puppet.conf]/content: content changed '{md5}58e2f9765e2994db8e8ab19a3513356e' to '{md5}ff0be7747d36fd62b30e2834afecf4f1'
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[puppet.conf]/owner: owner changed 'root' to 'puppet'
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[puppet.conf]/group: group changed 'root' to 'puppet'
+==> puppet: Notice: /Stage[main]/Puppet::Server/Service[puppetmaster]/ensure: ensure changed 'stopped' to 'running'
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[autosign.conf]/ensure: defined content as '{md5}3389dae361af79b04c9c8e7057f60cc6'
+==> puppet: Notice: /Stage[main]/Puppet::Server/File[/etc/puppet/manifests/nodes.pp]/ensure: created
+==> puppet: Notice: /Stage[main]/Networking/File[/etc/hosts]/content: content changed '{md5}bcdce9eb1984806ffd731980c25873ab' to '{md5}707eb1e47c2d3f3bb0abe4f666c3ca91'
+==> puppet: Notice: /Stage[main]/Puppet/Package[puppet]/ensure: ensure changed '3.4.3-1.el6' to '0:3.7.5-1.el6'
+==> puppet: Notice: /Stage[main]/Puppet/Service[puppet]/ensure: ensure changed 'stopped' to 'running'
+==> puppet: Notice: Finished catalog run in 166.92 seconds
+==> puppet: Error: Report processor failed: undefined method `exist?' for Puppet::FileSystem:Module
+==> client1: Importing base box 'centos6'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 50%[KProgress: 70%[KProgress: 80%[KProgress: 90%[K==> client1: Matching MAC address for NAT networking...
+==> client1: Setting the name of the VM: puppet-sandbox-master_client1_1428834579557_79790
+==> client1: Fixed port collision for 22 => 2222. Now on port 2200.
+==> client1: Clearing any previously set network interfaces...
+==> client1: Preparing network interfaces based on configuration...
+    client1: Adapter 1: nat
+    client1: Adapter 2: hostonly
+==> client1: Forwarding ports...
+    client1: 22 => 2200 (adapter 1)
+==> client1: Running 'pre-boot' VM customizations...
+==> client1: Booting VM...
+==> client1: Waiting for machine to boot. This may take a few minutes...
+    client1: SSH address: 127.0.0.1:2200
+    client1: SSH username: vagrant
+    client1: SSH auth method: private key
+    client1: Warning: Connection timeout. Retrying...
+    client1: Warning: Connection timeout. Retrying...
+    client1: 
+    client1: Vagrant insecure key detected. Vagrant will automatically replace
+    client1: this with a newly generated keypair for better security.
+    client1: 
+    client1: Inserting generated public key within guest...
+==> client1: Machine booted and ready!
+==> client1: Checking for guest additions in VM...
+==> client1: Setting hostname...
+==> client1: Configuring and enabling network interfaces...
+==> client1: Mounting shared folders...
+    client1: /vagrant => C:/Users/P/EMC/puppet-sandbox-master
+    client1: /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1 => C:/Users/P/EMC/puppet-sandbox-master/provision/modules
+    client1: /tmp/vagrant-puppet/manifests-2c1be6756611028b6f44aed39d040449 => C:/Users/P/EMC/puppet-sandbox-master/provision/manifests
+==> client1: Running provisioner: puppet...
+==> client1: Running Puppet with default.pp...
+==> client1: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:2
+==> client1:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:2:in `result')
+==> client1: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:3
+==> client1:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:3:in `result')
+==> client1: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:9
+==> client1:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:9:in `result')
+==> client1: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:10
+==> client1:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:10:in `result')
+==> client1: Warning: Config file /etc/puppet/hiera.yaml not found, using Hiera defaults
+==> client1: Notice: Compiled catalog for client1.example.com in environment production in 6.43 seconds
+==> client1: Notice: /Stage[pre]/Repos::Yum/File[puppetlabs.repo]/content: content changed '{md5}9eca43fb2e9feef4af7be3dcaffba1b9' to '{md5}411280de3bdc15fbc8fe2cd0f8fd01d3'
+==> client1: Notice: /File[puppetlabs.repo]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> client1: Notice: /Stage[pre]/Repos::Yum/Exec[yum_makecache]: Triggered 'refresh' from 2 events
+==> client1: Notice: /Stage[main]/Networking/File[/etc/hosts]/content: content changed '{md5}fb5e85c17bc76117abbaf43707729f4d' to '{md5}fc48c75dec0b8958941ac3e8f0999e3e'
+==> client1: Notice: /Stage[main]/Puppet/Package[puppet]/ensure: ensure changed '3.4.3-1.el6' to '0:3.7.5-1.el6'
+==> client1: Notice: /Stage[main]/Puppet/Service[puppet]/ensure: ensure changed 'stopped' to 'running'
+==> client1: Notice: Finished catalog run in 213.83 seconds
+==> client1: Error: Report processor failed: undefined method `exist?' for Puppet::FileSystem:Module
+==> client2: Importing base box 'centos6'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 50%[KProgress: 70%[KProgress: 90%[K==> client2: Matching MAC address for NAT networking...
+==> client2: Setting the name of the VM: puppet-sandbox-master_client2_1428835055003_71732
+==> client2: Fixed port collision for 22 => 2222. Now on port 2201.
+==> client2: Clearing any previously set network interfaces...
+==> client2: Preparing network interfaces based on configuration...
+    client2: Adapter 1: nat
+    client2: Adapter 2: hostonly
+==> client2: Forwarding ports...
+    client2: 22 => 2201 (adapter 1)
+==> client2: Running 'pre-boot' VM customizations...
+==> client2: Booting VM...
+==> client2: Waiting for machine to boot. This may take a few minutes...
+    client2: SSH address: 127.0.0.1:2201
+    client2: SSH username: vagrant
+    client2: SSH auth method: private key
+    client2: Warning: Connection timeout. Retrying...
+    client2: Warning: Connection timeout. Retrying...
+    client2: Warning: Connection timeout. Retrying...
+    client2: Warning: Connection timeout. Retrying...
+    client2: Warning: Remote connection disconnect. Retrying...
+    client2: Warning: Remote connection disconnect. Retrying...
+    client2: 
+    client2: Vagrant insecure key detected. Vagrant will automatically replace
+    client2: this with a newly generated keypair for better security.
+    client2: 
+    client2: Inserting generated public key within guest...
+==> client2: Machine booted and ready!
+==> client2: Checking for guest additions in VM...
+==> client2: Setting hostname...
+==> client2: Configuring and enabling network interfaces...
+==> client2: Mounting shared folders...
+    client2: /vagrant => C:/Users/P/EMC/puppet-sandbox-master
+    client2: /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1 => C:/Users/P/EMC/puppet-sandbox-master/provision/modules
+    client2: /tmp/vagrant-puppet/manifests-2c1be6756611028b6f44aed39d040449 => C:/Users/P/EMC/puppet-sandbox-master/provision/manifests
+==> client2: Running provisioner: puppet...
+==> client2: Running Puppet with default.pp...
+==> client2: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:2
+==> client2:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:2:in `result')
+==> client2: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:3
+==> client2:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:3:in `result')
+==> client2: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:9
+==> client2:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:9:in `result')
+==> client2: Warning: Variable access via 'os_release_major_version' is deprecated. Use '@os_release_major_version' instead. template[/tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb]:10
+==> client2:    (at /tmp/vagrant-puppet/modules-a9a1e0f16038c564b5399839b9a052b1/repos/templates/puppetlabs.repo.erb:10:in `result')
+==> client2: Warning: Config file /etc/puppet/hiera.yaml not found, using Hiera defaults
+==> client2: Notice: Compiled catalog for client2.example.com in environment production in 7.97 seconds
+==> client2: Notice: /Stage[pre]/Repos::Yum/File[puppetlabs.repo]/content: content changed '{md5}9eca43fb2e9feef4af7be3dcaffba1b9' to '{md5}411280de3bdc15fbc8fe2cd0f8fd01d3'
+==> client2: Notice: /File[puppetlabs.repo]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> client2: Notice: /Stage[pre]/Repos::Yum/Exec[yum_makecache]: Triggered 'refresh' from 2 events
+==> client2: Notice: /Stage[main]/Networking/File[/etc/hosts]/content: content changed '{md5}5335b098f5e8cbe89b1010f0bb6b4c12' to '{md5}1a5b1ebf0fb6e658d7461516c8d585aa'
+==> client2: Notice: /Stage[main]/Puppet/Package[puppet]/ensure: ensure changed '3.4.3-1.el6' to '0:3.7.5-1.el6'
+==> client2: Notice: /Stage[main]/Puppet/Service[puppet]/ensure: ensure changed 'stopped' to 'running'
+==> client2: Notice: Finished catalog run in 205.36 seconds
+==> client2: Error: Report processor failed: undefined method `exist?' for Puppet::FileSystem:Module
+Finished: SUCCESS
